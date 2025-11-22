@@ -15,12 +15,12 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
-// ------------------ AUTH ------------------
+// AUTH
 export const registerUser = (data) => api.post("/auth/register", data);
 export const loginUser = (data) => api.post("/auth/login", data);
 export const fetchCurrentUser = () => api.get("/auth/me");
 
-// ------------------ PRODUCTS ------------------
+// PRODUCTS 
 export const getProducts = (page = 1, limit = 5, sortField = "id", sortOrder = "asc") =>
   api.get(
     `/products?page=${page}&limit=${limit}&sortField=${sortField}&sortOrder=${sortOrder}`
@@ -35,7 +35,7 @@ export const updateProduct = (id, data) => api.put(`/products/${id}`, data);
 
 export const deleteProduct = (id) => api.delete(`/products/${id}`);
 
-// ------------------ IMPORT / EXPORT ------------------
+// IMPORT / EXPORT
 export const importCSV = (file) => {
   const formData = new FormData();
   formData.append("file", file);
@@ -48,7 +48,7 @@ export const importCSV = (file) => {
 export const exportCSV = () =>
   api.get("/products/export", { responseType: "blob" });
 
-// ------------------ HISTORY ------------------
+// HISTORY
 export const getHistory = (id) => api.get(`/products/${id}/history`);
 
 export default api;

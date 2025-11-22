@@ -1,4 +1,3 @@
-// src/components/ProductRow.js
 import React, { useState } from "react";
 import { updateProduct, deleteProduct } from "../services/api";
 import { toast } from "react-toastify";

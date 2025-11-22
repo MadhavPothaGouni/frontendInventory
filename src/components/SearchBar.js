@@ -1,4 +1,3 @@
-// src/components/SearchBar.js
 import React, { useState } from "react";
 
 function SearchBar({ onSearch }) {
@@ -7,7 +6,7 @@ function SearchBar({ onSearch }) {
   const handleChange = (e) => {
     const value = e.target.value;
     setQuery(value);
-    onSearch(value); // live search
+    onSearch(value); 
   };
 
   const handleKeyDown = (e) => {

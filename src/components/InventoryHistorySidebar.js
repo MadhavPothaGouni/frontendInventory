@@ -1,4 +1,3 @@
-// src/components/InventoryHistorySidebar.js
 import React, { useEffect, useState } from "react";
 import { getHistory } from "../services/api";
 import { format } from "date-fns";

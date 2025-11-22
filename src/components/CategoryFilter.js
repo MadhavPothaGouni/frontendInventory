@@ -1,4 +1,3 @@
-// frontend/src/components/CategoryFilter.js
 import React from "react";
 
 function CategoryFilter({ allProducts, selectedCategory, onCategoryChange }) {
