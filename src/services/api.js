@@ -3,7 +3,7 @@ import axios from "axios";
 // dynamic baseURL (local vs production)
 const api = axios.create({
   baseURL:
-    process.env.REACT_APP_API_URL || "/api",  
+    process.env.REACT_APP_API_URL || "http://localhost:5000/api",  
 });
 
 // attach JWT token to every request
